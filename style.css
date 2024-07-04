@@ -1,0 +1,290 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    color: #8a65d3;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header img {
+    width: 60px;
+}
+
+#container {
+    background-color: #dddae2;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 90%;
+    height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+#list-header {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+.blankDiv {
+    background-color: #dddae2;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#addNoteDiv {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNoteDiv:hover {
+    transition: 0.25s;
+    background-color: #f1f1f1;
+    
+}
+
+#addNoteDiv i {
+    font-size: 70px;
+    color: gainsboro;
+}
+
+/* List CSS */
+
+#list-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+li {
+    position: relative;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px #b3b3b3, -3px -3px 6px #b3b3b3;
+    word-wrap: break-word;
+    overflow: hidden;
+    cursor: default;
+}
+
+li span {
+    font-size: 12px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+#noteBtns-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#infoBtn,
+#editBtn,
+#deleteBtn {
+    background-color: #8c53ff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    width: 60px;
+}
+
+
+#editBtn {
+    background-color: gainsboro;
+}
+
+#deleteBtn{
+    background-color:#d0bbfb ;
+}
+
+
+#deleteBtn:hover {
+    background-color: #8c53ff;
+}
+
+#editBtn:hover {
+    background-color: gray;
+}
+
+
+
+#infoBtn:hover {
+    background-color: #5025a7;
+}
+
+
+
+
+/* Create Note Popup CSS */
+
+#popupContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+    resize: none;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#submitBtn, #closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#closeBtn {
+    background-color: gainsboro;
+}
+
+/* Editing Popup CSS */
+
+#editing-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#editing-container textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #8c53ff;
+    resize: none;
+}
+
+#editing-container #btn-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#editing-container #submitBtn, #editing-container #closeBtn {
+    width: 100px;
+    background-color: #8c53ff;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#editing-container #closeBtn {
+    background-color: gainsboro;
+}
